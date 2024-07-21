@@ -1,4 +1,3 @@
-
 version: 2
 
 models:
@@ -15,5 +14,21 @@ models:
     columns:
       - name: rep_date
         description: "Not null rep_date"
+        data_tests:
+          - not_null
+
+  - name: tips_with_previous
+    description: "Test tips_with_previous"
+    columns:
+      - name: year_month
+        description: "Not null year_month"
+        data_tests:
+          - not_null
+
+  - name: monthly_tips
+    description: "Test monthly_tips"
+    columns:
+      - name: year_month
+        description: "Not null year_month"
         data_tests:
           - not_null

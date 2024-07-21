@@ -1,4 +1,4 @@
-version: 1
+version: 2
 sources:
   - name: chicago_taxi_trips
     database: bigquery-public-data
