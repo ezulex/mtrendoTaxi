@@ -1,3 +1,5 @@
+{{ config(alias='top_3_taxis') }}
+
 WITH april_2018_tips_top_3_taxis AS (
     SELECT
         taxi_id,
