@@ -1,0 +1,19 @@
+
+version: 2
+
+models:
+  - name: tips_change
+    description: "Test tips_change"
+    columns:
+      - name: year_month
+        description: "Not null year_month"
+        data_tests:
+          - not_null
+
+  - name: top_3_taxis
+    description: "Test top_3_taxis"
+    columns:
+      - name: rep_date
+        description: "Not null rep_date"
+        data_tests:
+          - not_null
