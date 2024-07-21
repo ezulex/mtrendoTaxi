@@ -14,10 +14,10 @@ SELECT
     END AS tips_change
 FROM
     {{ ref('tips_with_previous') }}
-ORDER BY
-    taxi_id, year_month
-
 
 {% if is_incremental() %}
     WHERE year_month >= (SELECT MAX(year_month) FROM {{ this }})
 {% endif %}
+
+ORDER BY
+    taxi_id, year_month
