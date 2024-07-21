@@ -128,9 +128,8 @@
              description: "Longitude where the trip ended."
            - name: dropoff_location
              description: "Location where the trip ended."
+   ```
 
-     ```
-   
 4. **Настройка переменных**:
 Создайте в корне проекта файл .env и добавьте в него данные для доступа к таблице Google и BigQuery.
 
