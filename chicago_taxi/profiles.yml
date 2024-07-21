@@ -1,0 +1,14 @@
+chicago_taxi:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: service-account
+      project: mtrendo-430108
+      dataset: mtrendo_ds
+      keyfile: /Users/ab/PycharmProjects/mtrendoTaxi/chicago_taxi/acc/service-account.json
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      retries: 1
