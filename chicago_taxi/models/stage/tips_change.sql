@@ -1,6 +1,6 @@
 {{ config(
     materialized='incremental',
-    unique_key=('taxi_id, year_month')
+    unique_key=['taxi_id', 'year_month']
 ) }}
 
 
@@ -14,10 +14,8 @@ SELECT
     END AS tips_change
 FROM
     {{ ref('tips_with_previous') }}
-
 {% if is_incremental() %}
     WHERE year_month >= (SELECT MAX(year_month) FROM {{ this }})
 {% endif %}
-
 ORDER BY
     taxi_id, year_month
