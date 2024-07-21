@@ -6,7 +6,7 @@ WITH april_2018_tips_top_3_taxis AS (
         SUM(tips) AS tips_sum,
         FORMAT_TIMESTAMP('%Y-%m', MAX(trip_start_timestamp)) AS rep_date
     FROM
-        `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+        {{ source('chicago_taxi_trips', 'taxi_trips') }}
     WHERE
         EXTRACT(YEAR FROM trip_start_timestamp) = 2018
         AND EXTRACT(MONTH FROM trip_start_timestamp) = 4

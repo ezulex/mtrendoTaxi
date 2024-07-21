@@ -1,0 +1,55 @@
+version: 1
+sources:
+  - name: chicago_taxi_trips
+    database: bigquery-public-data
+    schema: chicago_taxi_trips
+    tables:
+      - name: taxi_trips
+        description: "This table contains detailed information about taxi trips in Chicago."
+        columns:
+          - name: unique_key
+            description: "Unique identifier for the taxi trip."
+          - name: taxi_id
+            description: "Identifier for the taxi."
+          - name: trip_start_timestamp
+            description: "Timestamp for when the trip started."
+          - name: trip_end_timestamp
+            description: "Timestamp for when the trip ended."
+          - name: trip_seconds
+            description: "Duration of the trip in seconds."
+          - name: trip_miles
+            description: "Distance of the trip in miles."
+          - name: pickup_census_tract
+            description: "Census tract where the trip started."
+          - name: dropoff_census_tract
+            description: "Census tract where the trip ended."
+          - name: pickup_community_area
+            description: "Community area where the trip started."
+          - name: dropoff_community_area
+            description: "Community area where the trip ended."
+          - name: fare
+            description: "Fare for the trip."
+          - name: tips
+            description: "Tips given for the trip."
+          - name: tolls
+            description: "Tolls for the trip."
+          - name: extras
+            description: "Extra charges for the trip."
+          - name: trip_total
+            description: "Total amount charged for the trip."
+          - name: payment_type
+            description: "Payment type used for the trip."
+          - name: company
+            description: "Taxi company providing the service."
+          - name: pickup_latitude
+            description: "Latitude where the trip started."
+          - name: pickup_longitude
+            description: "Longitude where the trip started."
+          - name: pickup_location
+            description: "Location where the trip started."
+          - name: dropoff_latitude
+            description: "Latitude where the trip ended."
+          - name: dropoff_longitude
+            description: "Longitude where the trip ended."
+          - name: dropoff_location
+            description: "Location where the trip ended."
