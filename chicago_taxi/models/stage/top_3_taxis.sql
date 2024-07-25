@@ -8,8 +8,7 @@ WITH april_2018_tips_top_3_taxis AS (
     FROM
         {{ source('chicago_taxi_trips', 'taxi_trips') }}
     WHERE
-        EXTRACT(YEAR FROM trip_start_timestamp) = 2018
-        AND EXTRACT(MONTH FROM trip_start_timestamp) = 4
+        DATE_TRUNC(trip_start_timestamp, MONTH) = '2018-04-01'
     GROUP BY
         taxi_id
 )
